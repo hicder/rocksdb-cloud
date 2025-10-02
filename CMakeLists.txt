@@ -1646,6 +1646,7 @@ endif()
 option(WITH_EXAMPLES "build with examples" OFF)
 if(WITH_EXAMPLES)
   add_subdirectory(examples)
+  add_subdirectory(cloud/examples)
 endif()
 
 option(WITH_BENCHMARK "build benchmark tests" OFF)
