@@ -726,7 +726,7 @@ Status BlockBasedTable::Open(
        pinningInfo.pin_partition)) {
     // Prefetch Phase 2
     prefetch_buffer.reset();
-    s = PrefetchTail(ro, file.get(), file_size, force_direct_prefetch,
+    s = PrefetchTail(ro, rep->file.get(), file_size, force_direct_prefetch,
                      tail_prefetch_stats, prefetch_all, preload_all,
                      &prefetch_buffer, ioptions.stats, tail_size,
                      ioptions.logger);
